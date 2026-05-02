@@ -4,25 +4,60 @@
 <title>Start</title>
 
 
-<style> body { background-image: url("start.png");
-    background-size: contain;      
-    background-repeat: no-repeat; 
-    background-position: center;
-} </style>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+body {
+  margin: 0;
+  height: 100vh; /* вместо min-height */
+  overflow: hidden; /* убирает прокрутку */
+  background-image: url("start.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+ .row {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 50px;
+      margin-top: 70px;
+    }
+	
+	
+
+
+h1, h2, h3 {
+  text-align: center;
+  margin-top: 65px;
+  margin-bottom: 100px;
+  font-size: 60px;
+  color: white;
+}
+
+
+@media (max-width: 600px) {
+  .row {
+    flex-direction: column;
+    align-items: center;
+  }
+}
 
 
 
+</style>
 
-<style> h1 {text-align: center; margin-top: 100px; margin-bottom: 100px; font-size: 50px;} </style>
-<style> h2 {text-align: center; margin-top: 100px; margin-bottom: 100px; font-size: 50px;} </style>
-<style> h3 {text-align: center; margin-top: 100px; margin-bottom: 100px; font-size: 50px;} </style>
 
 </head>
 <body>
 
+
+<div class = "column">
 <a href = "page1.html"><h1>Start</h1></a>
 <h2>Contact</h2>
 <h3>Secret</h3>
+</div>
 
 </body>
 </html>

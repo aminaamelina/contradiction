@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html>
 <head>
-
 <title>choice</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -10,7 +9,7 @@ body {
   margin: 0;
   height: 100vh; /* вместо min-height */
   overflow: hidden; /* убирает прокрутку */
-  background-image: url("page2.png");
+  background-image: url(".png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -26,18 +25,18 @@ body {
 
 
 h1, h2 {
-  text-align: center;
-  margin-top: 100px;
-  margin-bottom: 100px;
-  font-size: 50px;
+  text-align: left; /* теперь влево */
+  margin: 0;
+  font-size: 40px;
 }
 
 
 
-.row {
-  display: flex;
-  justify-content: center;
-  gap: 50px;
+.vertical-align {
+  position: absolute;
+  top: 60%;   /* ниже */
+  left: 5%;   /* отступ слева */
+  transform: translateY(-50%);
 }
 
 @media (max-width: 600px) {
@@ -57,10 +56,11 @@ h1, h2 {
 <body>
 
 
-<div class="row">
-<a href = "viktor1.html"><h1>Viktor</h1>
-<a href = "james1.html"><h2>James</h2>
+<div class="vertical-align">
+<a href="viktor2.html"><h1>Хочу телек посмотреть</h1></a>
+<h2>Wanna watch smth on tv</h2>
 </div>
+
 
 </body>
 </html>
