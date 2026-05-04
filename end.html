@@ -62,6 +62,16 @@ h1, h2 {
 The CIA agent drops his drink in shock and disgust. "Thank you friend, but you must be confused... There's no propaganda in America."<br></h1></a>
 <a href="index.html"><h2>Go Back</h2></a>
 </div>
+<div id="fade"></div>
+<script>
+function goToPage(url) {
+  const fade = document.getElementById("fade");
+  fade.classList.add("active");
 
+  setTimeout(() => {
+    window.location.href = url;
+  }, 500);
+}
+</script>
 </body>
 </html>

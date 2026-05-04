@@ -133,7 +133,18 @@ h1, h2 {
     document.querySelector(".speaker-name").textContent = dialogues[index].name;
     document.getElementById("dialogue-text").textContent = dialogues[index].text;
   }
-</script>
+  
+  
 
+function goToPage(url) {
+  const fade = document.getElementById("fade");
+  fade.classList.add("active");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 500);
+}
+</script>
+<div id="fade"></div>
 </body>
 </html>

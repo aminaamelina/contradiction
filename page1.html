@@ -62,5 +62,18 @@ h1, h2 {
 <a href = "james1.html"><h2>James</h2>
 </div>
 
+
+<div id="fade"></div>
+<script>
+function goToPage(url) {
+  const fade = document.getElementById("fade");
+  fade.classList.add("active");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 500);
+}
+</script>
+
 </body>
 </html>

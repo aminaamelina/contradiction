@@ -55,8 +55,21 @@ h1, h2, h3 {
 
 <div class = "column">
 <a href = "page1.html"><h1>Start</h1></a>
-<a href = "https://aminaamelina.github.io/index.html"><h2>Contact</h2></a>
+<a href = "https://aminaamelina.github.io/index.html" <h2>Contact</h2></a>
 </div>
 
+
+<div id="fade"></div>
+
+<script>
+function goToPage(url) {
+  const fade = document.getElementById("fade");
+  fade.classList.add("active");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 500);
+}
+</script>
 </body>
 </html>

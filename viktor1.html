@@ -113,7 +113,7 @@ h1, h2 {
   <a href="viktor2.html"><button onclick="nextDialogue()">Next</button>
 </div>
 
-
+<div id="fade"></div>
 
 
 <script>
@@ -137,9 +137,16 @@ h1, h2 {
     document.querySelector(".speaker-name").textContent = dialogues[index].name;
     document.getElementById("dialogue-text").textContent = dialogues[index].text;
   }
+
+function goToPage(url) {
+  const fade = document.getElementById("fade");
+  fade.classList.add("active");
+
+  setTimeout(() => {
+    window.location.href = url;
+  }, 500);
+}
 </script>
-
-
 
 </body>
 </html>
