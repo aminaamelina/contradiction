@@ -9,7 +9,7 @@ body {
   margin: 0;
   height: 100vh; /* вместо min-height */
   overflow: hidden; /* убирает прокрутку */
-  background-image: url(".png");
+  background-image: url("james3.png");
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -25,7 +25,7 @@ body {
 
 
 h1, h2 {
-  text-align: right; /* теперь вправо */
+  text-align: left; /* теперь вправо */
   margin: 0;
   font-size: 40px;
 }
@@ -35,7 +35,7 @@ h1, h2 {
 .vertical-align {
   position: absolute;
   top: 60%;   /* ниже */
-  right: 5%;   /* отступ справа */
+  left: 5%;   /* отступ справа */
   transform: translateY(-50%);
 }
 
@@ -47,6 +47,56 @@ h1, h2 {
 }
 
 
+.dialogue-box {
+  position: fixed;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  width: 80%;
+  max-width: 1000px;
+  background: rgba(10, 15, 30, 0.9);
+  border: 4px solid white;
+  border-radius: 18px;
+  padding: 25px 30px;
+  color: white;
+  font-family: Georgia, serif;
+  box-shadow: 0 0 25px rgba(0,0,0,0.5);
+}
+
+.speaker-name {
+  position: absolute;
+  top: -35px;
+  left: 25px;
+  background: white;
+  color: #1b1b1b;
+  padding: 8px 20px;
+  border-radius: 12px 12px 0 0;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.dialogue-box p {
+  font-size: 28px;
+  line-height: 1.4;
+  margin: 0 0 15px;
+}
+
+.dialogue-box button {
+  float: right;
+  background: #6b35d8;
+  color: white;
+  border: none;
+  padding: 10px 22px;
+  font-size: 18px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.dialogue-box button:hover {
+  background: #8b5cff;
+}
+
+
 
 </style>
 
@@ -55,12 +105,35 @@ h1, h2 {
 </head>
 <body>
 
-
-<div class="vertical-align">
-<a href= "james2.html"><h1>О я уже проснулся дада утро доброе утро</h1>
-<h2>Wanna watch smth on tv</h2>
+<div class="dialogue-box">
+  <div class="speaker-name">James</div>
+  <p id="dialogue-text">Let's watch some TV. There should be something interesting on it.</p>
+  <a href="james2.html"><button onclick="nextDialogue()">Next</button>
 </div>
 
+
+<script>
+  const dialogues = [
+    {
+      name: "James",
+      text: "Let's watch some TV. There should be something interesting on it."
+    }
+  ];
+
+  let index = 0;
+
+  function nextDialogue() {
+    index++;
+
+    if (index >= dialogues.length) {
+      document.querySelector(".dialogue-box").style.display = "none";
+      return;
+    }
+
+    document.querySelector(".speaker-name").textContent = dialogues[index].name;
+    document.getElementById("dialogue-text").textContent = dialogues[index].text;
+  }
+</script>
 
 </body>
 </html>
